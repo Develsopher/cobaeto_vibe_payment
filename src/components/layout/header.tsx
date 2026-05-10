@@ -43,10 +43,11 @@ export const Header = () => {
 
         {/* Mobile Navigation */}
         <Sheet>
-          <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon" aria-label="메뉴 열기">
-              <Menu className="h-5 w-5" />
-            </Button>
+          <SheetTrigger
+            className="md:hidden"
+            render={<Button variant="ghost" size="icon" aria-label="메뉴 열기" />}
+          >
+            <Menu className="h-5 w-5" />
           </SheetTrigger>
           <SheetContent side="top" className="flex flex-col gap-6 p-6 w-full">
             <SheetTitle className="sr-only">메뉴</SheetTitle>
